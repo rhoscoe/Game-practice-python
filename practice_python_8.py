@@ -13,11 +13,11 @@ win = 0
 options = ["rock", "scissors", "paper"]
 
 while True:
-    player = str(raw_input("Choose rock, scissors or paper, or q to quit: "))
-    comp = random.choice(options)
+    player = str(raw_input("Choose rock, scissors or paper, or q to quit: ")) #asks for user input
+    comp = random.choice(options) #chooses a random option from rock, scissors or paper
     if player == comp:
         print "Same move! Try again."
-    elif player == "rock" and comp == "scissors":
+    elif player == "rock" and comp == "scissors": #this and the following two elif statements only cover when the player wins
         print "The player wins! Let's play again."
         win +=1.0
         print ("Wins: "+str(win))
@@ -31,7 +31,7 @@ while True:
         print ("Wins: "+str(win))
     elif player == "q":
         break
-    else:
+    else: #all situations in which the player can win or draw are covered above
         print "The computers wins this time. Try again."
     
 
